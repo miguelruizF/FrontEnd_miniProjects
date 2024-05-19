@@ -1,0 +1,131 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    font-size: 100%;
+    list-style-type: none;
+    background-color: var(--color_font);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --font_main:"Sora", sans-serif;
+    --title: 20px;
+    --subtitle: 18px;
+    --content: 16px;
+    --small: 14px;
+    --tag: 10px;
+    --color_text: #883AE1;
+    --color_image: #E6D6FC;
+    --color_font: #E5EAF0;
+    --color_default: #FAFAF9;
+    --color_titles: #20293A;
+    --color_texts: #6C727F;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 500px;
+    /* height: 500px; */
+    /* border-radius: 20px; */
+}
+.card_content{
+    background: var(--color_default);
+    padding: 20px;
+    -webkit-box-shadow: 11px 10px 5px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 11px 10px 5px 0px rgba(0,0,0,0.27);
+    box-shadow: 11px 10px 5px 0px rgba(0,0,0,0.27);
+    border-radius: 20px;
+    & hr{
+        background-color: var(--color_texts);
+        margin: 20px 0;
+    }
+}
+.card_img>img{
+    border-radius: 10px;
+}
+
+.btn_design{
+    margin: 15px 0px;
+    color: var(--color_text);
+    font-family: var(--font_main);
+    font-size: var(--content);
+    font-weight: 700;
+    border: none;
+    background: var(--color_font);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.card_text{
+    & .card_title{
+        font-size: var(--title);
+        font-family: var(--font_main);
+        font-weight: bold;
+        padding: 10px 0px;
+    }
+    & .card_p{
+        color: var(--color_texts);
+        font-family: var(--font_main);
+        /* font-weight: bold; */
+        font-size: var(--content);
+        padding-bottom: 10px;
+    }
+}
+
+.card_footer{
+    & .card_foo span{
+        color: var(--color_texts);
+        font-family: var(--font_main);
+        font-size: var(--small);
+        padding-bottom: 10px;
+    }
+}
+
+@media(max-width: 768px) {
+    .card_text{
+        & .card_title{
+            font-size: var(--subtitle);
+            padding: 6px 0px;
+        }
+        & .card_p{
+            font-size: var(--small);
+            padding-bottom: 6px;
+        }
+    }
+
+    .card_footer{
+        & .card_foo span{
+            font-size: var(--tag);
+            padding-bottom: 7px;
+        }
+    }
+
+    .btn_design{
+        margin: 10px 0px;
+        font-size: var(--small);
+        padding: 7px 15px;
+    }
+
+    .card_content{
+        & hr{
+            margin: 10px 0;
+        }
+    }
+}
