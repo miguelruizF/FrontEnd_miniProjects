@@ -9,7 +9,7 @@
 body{
     font-size: 100%;
     list-style-type: none;
-    background-color: var(--color_font);
+    background-color: var(--color_text);
 }
 
 img{
